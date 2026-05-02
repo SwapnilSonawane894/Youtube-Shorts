@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { margin: 0; background: black; overflow: hidden; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+
+        const letters = "010101010101CYBERPUNK".split("");
+        const drops = Array(Math.floor(canvas.width / 20)).fill(1);
+
+        setInterval(() => {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#0f0"; 
+            ctx.font = "20px monospace";
+
+            drops.forEach((y, x) => {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, x * 20, y * 20);
+                if (y * 20 > canvas.height && Math.random() > 0.95) drops[x] = 0;
+                drops[x]++;
+            });
+        }, 50);
+    </script>
+</body>
+</html>
+                
+        
+
