@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holographic Credit Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <canvas id="particles"></canvas>
+
+  <div class="scene">
+    <div class="card-wrap" id="cardWrap">
+
+      <div class="card-face card-front">
+        <div class="holo holo-anim"></div>
+        <div class="glint"></div>
+        <div class="front-content">
+          <div class="row-top">
+            <div class="brand">VISA</div>
+            <div class="contactless"></div>
+          </div>
+          <div class="chip">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+          <div class="number">4291 8374 0012 9955</div>
+          <div class="row-bot">
+            <div class="field">
+              <div class="lbl">Card Holder</div>
+              <div class="val">SWAPNIL S.</div>
+            </div>
+            <div class="field" style="text-align:right">
+              <div class="lbl">Expires</div>
+              <div class="val">18/29</div>
+            </div>
+            <div class="network">
+              <span class="c1"></span>
+              <span class="c2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-face card-back">
+        <div class="holo holo-anim" style="opacity:0.08"></div>
+        <div class="stripe"></div>
+        <div class="sig-panel">
+          <div class="cvv">739</div>
+        </div>
+        <div class="back-logo">NEXUS</div>
+        <div class="back-info">
+          Customer Service: 1-800-NEXUS<br>
+          nexuscard.io
+        </div>
+      </div>
+
+    </div>
+    <div class="shadow"></div>
+  </div>
+
+  <div class="label-text">Holographic Credit Card &mdash; by Swapnil</div>
+  <script src="script.js"></script>
+</body>
+</html>
